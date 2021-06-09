@@ -11,20 +11,39 @@
 
 // 3. Now add an ellipse command to draw a circle. An ellipse is like an oval.
 
+
 //    The ellipse command looks like this:      
- ellipse(250,250, 100,100);
 //    The first 2 numbers specify where to draw it. They are the x and y co-ordinates of the center of the ellipse.
 //    The third and fourth numbers are the size of the ellipse.
 //    The width is specified before the height. If they are the same, it draws a circle
 //    Change the numbers and re-run the program to see what happens.
 
-// 4. Now add a rect command to draw a rectangle.
- fill(#1EFAE9);
-//    The rect command looks like this:       
-rect(250,250, 100,100);
 
-rect(405, 405, 50, 50);
-//    Like the ellipse, the fist 2 numbers specify where to draw it, the other two are its size.
+fill(#15AD58 );
+rect(225,250, 50, 250);
+
+fill( #F7BEDD);
+
+ellipse(250, 300, 100,100);
+
+ellipse(250, 200, 100,100);
+
+ellipse(300, 250, 100,100);
+
+ellipse(200, 250, 100,100);
+
+fill( #FFEB0A);
+ellipse(250, 250, 80,80);
+
+ellipse(0, 0, 80,80);
+
+// 4. Now add a rect command to draw a rectangle.
+
+//    The rect command looks like this:       
+//rect(250,250, 100,100);
+
+//rect(405, 405, 50, 50);
+//    Like the ellipse, the fist 2 numbers specify where to draw it, the other two are its size
 //    The main difference is the x and y co-ordinates are the top left corner of the shape.
 //    If the width is the same as the height, it draws a square.
 
