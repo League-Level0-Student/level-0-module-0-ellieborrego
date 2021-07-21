@@ -6,8 +6,9 @@ public class QuizGame {
 	public static void main(String[] args) {
 		
 		// Create a variable to hold the user's score. Set it equal to zero. 
-		int score = 0;
+		int correct = 0;
 		int count = 0;
+		int wrong = 0;
 		
 		// ASK A QUESTION AND CHECK THE ANSWER
 		
@@ -20,12 +21,12 @@ public class QuizGame {
 		
 				// 3.  Use an if statement to check if their answer is correct
 		if(planets == 1) {
-			score++;
+			correct++;
 			JOptionPane.showMessageDialog(null, "Correct!");
 		}
 		else
 		{
-			score--;
+			wrong++;
 			JOptionPane.showMessageDialog(null, "Incorrect!");
 		}
 				// 4.  if the user's answer was correct, add one to their score 
@@ -36,13 +37,13 @@ public class QuizGame {
 		int dolphins = JOptionPane.showConfirmDialog(null, question);
 		count++;
 		if(dolphins == 1) {
-			score++;
+			correct++;
 			JOptionPane.showMessageDialog(null, "Correct!");
 
 		}
 		else
 		{
-			score--;
+			wrong++;
 			JOptionPane.showMessageDialog(null, "Incorrect!");
 
 		}
@@ -54,19 +55,27 @@ public class QuizGame {
 		int bananas = JOptionPane.showConfirmDialog(null, question);
 		count++; 
 		if(bananas == 1) {
-			score++;
+			correct++;
 			JOptionPane.showMessageDialog(null, "Correct!");
 
 		}
 		else
 		{
-			score--;
+			wrong++;
 			JOptionPane.showMessageDialog(null, "Incorrect!");
 
 		}
 		
+		int score = correct - wrong;
+		System.out.println("score " + score);
+		
+		if(score < 0)
+			score = 0;
+		
 		// After all the questions have been asked, tell the user their final score 
-		String final_score = "You got " + score + " out of "+ count + "!";
+		String final_score = "You got " + wrong + " wrong and "+ correct + " correct out of " + count + "!\n"
+				+ "You lost " + wrong + " points.."
+				+ "\nFinal score is : " + score;
 		
 		
 		JOptionPane.showMessageDialog(null, final_score);
